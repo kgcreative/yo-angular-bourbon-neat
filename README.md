@@ -5,9 +5,14 @@ version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generato
 
 ## Build & development
 
-Clone or fork the repo `$ git clone https://github.com/kgcreative/yo-angular-bourbon-neat.git`
+Clone or fork the repo:
+`$ git clone https://github.com/kgcreative/yo-angular-bourbon-neat.git`
 
-Install the node.js dependencies to the project `$ npm install`
+Install the node.js dependencies from the package.json file to the project:
+`$ npm install`
+
+Install the Bower dependencies 
+`$ bower update`
 
 Run `$ grunt` to initialize the build
 
