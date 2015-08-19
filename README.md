@@ -5,8 +5,12 @@ version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generato
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Clone or fork the repo 'git clone https://github.com/kgcreative/yo-angular-bourbon-neat.git'
+
+Run `grunt` to initialize the build
+
+Run `grunt serve` to initialize the environment with a local webserver & LiveReload.
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+Experimental: Running `grunt test` will run the unit tests with karma.
