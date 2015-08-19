@@ -77,7 +77,7 @@ module.exports = function (grunt) {
       // enabled code from generator-angular
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test', 'karma']
+        tasks: ['test:watch', 'newer:jshint:test', 'karma']
       },
       gruntfile: {
           files: ['Gruntfile.js']
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
         //]
         src: [
           'Gruntfile.js',
-          //'<%= yeoman.app %>/scripts/{,*/}*.js', /* disabled temporarily to squash init bug */
+          '<%= yeoman.app %>/scripts/{,*/}*.js', /* disabled temporarily to squash init bug */
           '!<%= yeoman.app %>/scripts/vendor/*',
           'test/spec/{,*/}*.js'
         ]
@@ -213,7 +213,7 @@ module.exports = function (grunt) {
     mocha: {
       all: {
         options: {
-          run: false, /* temporarily removing mocha and karma modules. There is no time to write unit tests for this demo */
+          run: false, //disables this run
           urls: ['http://<%= connect.options.hostname %>:<%= connect.test.options.port %>/index.html']
         }
       }
@@ -541,7 +541,7 @@ module.exports = function (grunt) {
     karma: {
       unit: {
         configFile: 'test/karma.conf.js',
-        singleRun: false /* temporarily removing mocha and karma modules. There is no time to write unit tests for this demo */
+        singleRun: false //temporary halt
       }
     }
   });
@@ -573,15 +573,15 @@ module.exports = function (grunt) {
         'wiredep',
         'concurrent:test',
         'autoprefixer',
-        // 'connect:test' /* temporarily removing mocha and karma modules. There is no time to write unit tests for this demo */
-        // 'mocha', /* temporarily removing mocha and karma modules. There is no time to write unit tests for this demo */
-        // 'karma' /* temporarily removing mocha and karma modules. There is no time to write unit tests for this demo */
+        'connect:test'
+        //'mocha',
+        //'karma'
       ]);
     }
 
-    // grunt.task.run([ /* temporarily removing mocha and karma modules. There is no time to write unit tests for this demo */
-    //    'mocha'
-    //  ]);
+    // grunt.task.run([
+    //  'mocha'
+    //]);
   });
 
   grunt.registerTask('build', [
