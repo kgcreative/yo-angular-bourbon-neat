@@ -14,7 +14,7 @@ body {
 }
 
 header {
-	@include span-columns(4);
+	@include span-columns(3);
 	@include omega();
 	text-align: left;
 	float:right;
@@ -22,7 +22,7 @@ header {
 
 main {
 	@include span-columns(8);
-	float:left;
+	@include shift(1);
 	@include margin(25px null 25px null);
 	padding: 20px;
 	@include border-top-radius(5px);
@@ -35,11 +35,13 @@ main {
 }
 
 footer {
-	@include span-columns(12);
-	padding: 10px;
+	@include span-columns(8);
+	@include shift(1);
+	padding: 1em;
 	font-size: em(14);
 	color: grey;
 	text-align: center;
+	padding-bottom: 2em;
 	a {
 		color: #0081C6;
 		&:hover {
