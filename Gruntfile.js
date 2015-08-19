@@ -196,7 +196,7 @@ module.exports = function (grunt) {
         //]
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          //'<%= yeoman.app %>/scripts/{,*/}*.js', /* disabled temporarily to squash init bug */
           '!<%= yeoman.app %>/scripts/vendor/*',
           'test/spec/{,*/}*.js'
         ]
